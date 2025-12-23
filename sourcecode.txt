@@ -1,0 +1,24 @@
+
+def add(x, y): return x + y
+def subtract(x, y): return x - y
+def multiply(x, y): return x * y
+def divide(x, y): return x / y if y != 0 else "Error! Division by zero."
+
+print("--- โปรแกรมคำนวณเลข ---")
+try:
+    num1 = float(input("ใส่ตัวเลขที่ 1: "))
+    op = input("เลือกเครื่องหมาย (+, -, *, /): ")
+    num2 = float(input("ใส่ตัวเลขที่ 2: "))
+
+    if op == '+':
+        print(f"คำตอบ: {num1} + {num2} = {add(num1, num2)}")
+    elif op == '-':
+        print(f"คำตอบ: {num1} - {num2} = {subtract(num1, num2)}")
+    elif op == '*':
+        print(f"คำตอบ: {num1} * {num2} = {multiply(num1, num2)}")
+    elif op == '/':
+        print(f"คำตอบ: {num1} / {num2} = {divide(num1, num2)}")
+    else:
+        print("เครื่องหมายไม่ถูกต้อง!")
+except ValueError:
+    print("กรุณาใส่เฉพาะตัวเลขเท่านั้น")
